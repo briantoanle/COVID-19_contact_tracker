@@ -13,14 +13,15 @@ class Student:
     def __repr__(self):
         return "'" + self.__str__() +"'"
 
-def is_valid_id(student_id):
-    if len(student_id) == 9 and student_id[:3] == 260:
-        print('nice')
-        #return True
+    def is_valid_id(student_id):
+        if len(student_id) == 9 and int(student_id[:3]) == 260:
+            return True
+        return False
+
 larry = Student('260745567', 'Larry', True)
 
-print(larry.is_valid_id())
-
+print(Student.is_valid_id('260745567'))
+print(Student.is_valid_id('26O1543s'))
 
 
 
